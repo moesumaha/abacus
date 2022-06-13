@@ -25,7 +25,7 @@
                     <p style="color: green;">Success: <span id="success_count">0</span></p>
                     <p style="color: red;">Error: <span id="error_count">0</span></p>
                     </div> -->
-                    <form action="{{route('check_mcix')}}" id="validateForm" method="POST" enctype="multipart/form-data">
+                    <form action="{{url('/')}}" id="validateForm" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     
                     <div class="form-group">

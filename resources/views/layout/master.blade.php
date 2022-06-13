@@ -69,19 +69,20 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
-<!--  json  -->
-<script type="text/javascript" src="json/data.json"></script>
-<script type="text/javascript" src="json/config.json"></script>
+
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="js/adminlte.min.js"></script>
 <!-- Jquery Validator -->
-<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="plugins/jquery-validation/additional-methods.min.js"></script>
-<script src="js/form-validate.js"></script>
+<script src="{{asset('plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+<script src="{{asset('plugins/jquery-validation/additional-methods.min.js')}}"></script>
+
+
+<script src="{{asset('js/form-validate.js')}}"></script>
+
 <!-- Toastr -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
 

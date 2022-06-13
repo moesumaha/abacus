@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/','MCIXController@index');
-Route::post('/','MCIXController@checkMCIX');
+Route::post('/check_mcix','MCIXController@checkMCIX');

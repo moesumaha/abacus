@@ -25,13 +25,13 @@
                     <p style="color: green;">Success: <span id="success_count">0</span></p>
                     <p style="color: red;">Error: <span id="error_count">0</span></p>
                     </div> -->
-                    <form action="{{url('/check_mcix')}}" id="validateForm" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('check_mcix')}}" id="validateForm" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     
                     <div class="form-group">
                         <label for="exampleInputEmail1">Upload Excel</label>
                         <div class="input-group mb-3">
-                            <input class="form-control" name="file" type="file" id="file"  >
+                            <input class="form-control" name="file" type="file" id="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
                         </div>
                     </div>
                     <div class="row">

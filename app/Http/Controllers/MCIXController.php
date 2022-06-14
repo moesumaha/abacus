@@ -41,7 +41,7 @@ class MCIXController extends Controller
         $sheetData = $spreadsheet->getActiveSheet()->toArray();
 
         $i=1;
-        unset($sheetData[0]);
+        // unset($sheetData[0]);
         $data_arr = [];
 
         foreach ($sheetData as $row) {
@@ -49,19 +49,44 @@ class MCIXController extends Controller
                 if (isset($row[$j])) {
                     $search_nrc = $this->search_nrc($row[$j]);
                     if($search_nrc){
-                        $check_credit_risk = $this->check_credit_report( $search_nrc->UniqueID);
-                        if($check_credit_risk){
+                        if($search_nrc->Active == 'Y'){
+                            $check_credit_risk = $this->check_credit_report( $search_nrc->UniqueID);
+                            if($check_credit_risk){
+                                $data_arr[$i]['Name'] = $search_nrc->FullName;
+                                $data_arr[$i]['Active'] = ($search_nrc->Active == 'Y') ? 'Active':'Inactive';
+                                $data_arr[$i]['NRC'] = $row[$j];
+                                $data_arr[$i]['al_mfi_str']=$check_credit_risk[0];
+                                $data_arr[$i]['al_amount']=$check_credit_risk[1];
+                                $data_arr[$i]['overlap_count']=$check_credit_risk[2];
+                                $data_arr[$i]['dl_mfi_str']=$check_credit_risk[3];
+                                $data_arr[$i]['dl_amount']=$check_credit_risk[4];
+                                $data_arr[$i]['wof_amount']=$check_credit_risk[5];
+                                $data_arr[$i]['wof_mfi_str']=$check_credit_risk[6];
+                            }
+                        }else{
                             $data_arr[$i]['Name'] = $search_nrc->FullName;
                             $data_arr[$i]['Active'] = ($search_nrc->Active == 'Y') ? 'Active':'Inactive';
-                            $data_arr[$i]['NRC'] = ($search_nrc->NRC);
-                            $data_arr[$i]['al_mfi_str']=$check_credit_risk[0];
-                            $data_arr[$i]['al_amount']=$check_credit_risk[1];
-                            $data_arr[$i]['overlap_count']=$check_credit_risk[2];
-                            $data_arr[$i]['dl_mfi_str']=$check_credit_risk[3];
-                            $data_arr[$i]['dl_amount']=$check_credit_risk[4];
-                            $data_arr[$i]['wof_amount']=$check_credit_risk[5];
-                            $data_arr[$i]['wof_mfi_str']=$check_credit_risk[6];
+                            $data_arr[$i]['NRC'] = $row[$j];
+                            $data_arr[$i]['al_mfi_str']='';
+                            $data_arr[$i]['al_amount']=0;
+                            $data_arr[$i]['overlap_count']=0;
+                            $data_arr[$i]['dl_mfi_str']='';
+                            $data_arr[$i]['dl_amount']=0;
+                            $data_arr[$i]['wof_amount']=0;
+                            $data_arr[$i]['wof_mfi_str']='';
                         }
+                        
+                    }else{
+                        $data_arr[$i]['Name'] = '';
+                        $data_arr[$i]['Active'] = 'Active';
+                        $data_arr[$i]['NRC'] = $row[$j];
+                        $data_arr[$i]['al_mfi_str']='';
+                        $data_arr[$i]['al_amount']=0;
+                        $data_arr[$i]['overlap_count']=0;
+                        $data_arr[$i]['dl_mfi_str']='';
+                        $data_arr[$i]['dl_amount']=0;
+                        $data_arr[$i]['wof_amount']=0;
+                        $data_arr[$i]['wof_mfi_str']='';
                     }
                 }
             }

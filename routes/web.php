@@ -16,6 +16,5 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+Route::post('/check_mcix','MCIXController@checkMCIX')->name('check_mcix');
 Route::get('/','MCIXController@index');
-Route::post('/check_mcix','MCIXController@checkMCIX');

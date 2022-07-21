@@ -8,13 +8,13 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{asset('public/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('public/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+  <link rel="stylesheet" href="{{asset('public/plugins/toastr/toastr.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="css/adminlte.min.css">
+  <link rel="stylesheet" href="{{asset('public/css/adminlte.min.css')}}">
   <style type="text/css">
   #loading_wrapper {
     display: none;
@@ -69,19 +69,19 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('public/plugins/jquery/jquery.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
 
 <!-- Bootstrap 4 -->
-<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('public/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="js/adminlte.min.js"></script>
+<script src="{{asset('public/js/adminlte.min.js')}}"></script>
 <!-- Jquery Validator -->
-<script src="{{asset('plugins/jquery-validation/jquery.validate.min.js')}}"></script>
-<script src="{{asset('plugins/jquery-validation/additional-methods.min.js')}}"></script>
+<script src="{{asset('public/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+<script src="{{asset('public/plugins/jquery-validation/additional-methods.min.js')}}"></script>
 
 
-<script src="{{asset('js/form-validate.js')}}"></script>
+<script src="{{asset('public/js/form-validate.js')}}"></script>
 
 <!-- Toastr -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>

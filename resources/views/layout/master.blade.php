@@ -10,11 +10,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{URL::asset('plugins/fontawesome-free/css/all.min.css')}}" />
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="{{URL::asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css" integrity="sha512-8vq2g5nHE062j3xor4XxPeZiPjmRDh6wlufQlfC6pdQ/9urJkU07NM0tEREeymP++NczacJ/Q59ul+/K2eYvcg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- icheck bootstrap -->
   <!-- <link rel="stylesheet" href="{{URL::asset('plugins/toastr/toastr.min.css')}}"> -->
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{URL::asset('css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
   <style type="text/css">
   #loading_wrapper {
     display: none;
@@ -75,9 +75,9 @@
 <!-- Bootstrap 4 -->
 <script src="{{URL::asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{URL::asset('js/adminlte.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 <!-- Jquery Validator -->
-<script src="{{URL::asset('plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{URL::asset('plugins/jquery-validation/additional-methods.min.js')}}"></script>
 
 

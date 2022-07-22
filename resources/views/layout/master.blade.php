@@ -86,7 +86,49 @@
 <!-- Toastr -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
 
-
+<script>
+  $(function () {
+    
+    $.validator.setDefaults({
+      submitHandler: function () {
+        alert( "Form successful submitted!" );
+      }
+    });
+    $('#validateForm').validate({
+      rules: {
+            // score_card: {
+            //     required: true
+            // },
+            // version: {
+            //     required: true
+            // },
+            file:{
+                required:true
+            }
+        },
+        messages: {
+            score_card: "Please select score card",
+            version: "Version number is required"
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+            error.addClass('invalid-feedback');
+            element.closest('.form-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).removeClass('is-invalid');
+        },
+        submitHandler: function(form) {
+            form.submit();
+            // setInterval(form_process(), 300000);
+            
+        }
+    });
+});
+</script>
 
 </body>
 </html>
